@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-dark-blue: #0f263d;
+  --font-main: Inter;
+  --font-title: Merriweather Sans;
+}
