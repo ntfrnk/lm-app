@@ -9,7 +9,7 @@
 	<div class="container mx-auto flex items-center justify-between px-4 md:px-0">
 		<!-- Logo -->
 		<div>
-			<img src="./images/logo.svg" class="h-8 md:h-14 w-auto" alt="Logo" />
+			<img src="/images/logo.svg" class="h-8 md:h-14 w-auto" alt="Logo" />
 		</div>
 
 		<!-- Botón menú (solo en móvil) -->

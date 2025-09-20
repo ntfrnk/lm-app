@@ -1,20 +1,15 @@
-<!-- Hero con imagen de fondo -->
-<section
-	class="relative flex h-[300px] items-center justify-center bg-cover bg-center md:h-[400px]"
-	style="background-image: url('/images/hero-01.jpg');"
->
-	<!-- Overlay oscuro -->
-	<div class="absolute inset-0 bg-black/60"></div>
+<script>
+	import Hero from "../../components/pages/blocks/hero.svelte";
 
-	<!-- Contenido -->
-	<div class="relative z-10 px-4 text-center text-white">
-		<h1 class="font-title text-3xl font-extrabold md:text-5xl">Sobre Nosotros</h1>
-		<p class="mx-auto mt-4 max-w-2xl text-base text-gray-200 md:text-lg">
-			Más de una década de experiencia en automatización, herrería y construcción, ofreciendo
-			soluciones integrales y de calidad para cada cliente.
-		</p>
-	</div>
-</section>
+	export let data;
+	$: page = data.page.item;
+</script>
+
+<Hero 
+    title={page?.title} 
+    description={page?.content}
+    image={page?.picture?.lg}
+/>
 
 <!-- Presentación -->
 <section class="bg-gray-50 py-16">
@@ -75,34 +70,42 @@
 			</div>
 			<div class="rounded-lg bg-dark-blue/70 p-6 shadow transition hover:shadow-lg">
 				<!-- Ícono: reloj con círculo externo -->
-<svg xmlns="http://www.w3.org/2000/svg"
-     class="h-10 w-10 text-emerald-400 mx-auto mb-4"
-     fill="none" viewBox="0 0 24 24"
-     stroke="currentColor" stroke-width="1.5"
-     stroke-linecap="round" stroke-linejoin="round">
-  <!-- Círculo externo -->
-  <circle cx="12" cy="12" r="9" />
-  <!-- Agujas -->
-  <path d="M12 7v5l3 2" />
-</svg>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="mx-auto mb-4 h-10 w-10 text-emerald-400"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<!-- Círculo externo -->
+					<circle cx="12" cy="12" r="9" />
+					<!-- Agujas -->
+					<path d="M12 7v5l3 2" />
+				</svg>
 
 				<h3 class="text-lg font-semibold">Responsabilidad</h3>
 				<p class="mt-2 text-sm text-gray-300">Cumplimos tiempos y acuerdos con compromiso real.</p>
 			</div>
 			<div class="rounded-lg bg-dark-blue/70 p-6 shadow transition hover:shadow-lg">
-				
-<!-- Ícono: escudo con check (confianza) -->
-<svg xmlns="http://www.w3.org/2000/svg"
-     class="h-10 w-10 text-emerald-400 mx-auto mb-4"
-     viewBox="0 0 24 24"
-     fill="none" stroke="currentColor"
-     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <!-- Escudo -->
-  <path d="M12 3l7 4v5c0 5-3.5 9-7 9s-7-4-7-9V7l7-4z" />
-  <!-- Check -->
-  <path d="M9 12l2 2 4-4" />
-</svg>
-
+				<!-- Ícono: escudo con check (confianza) -->
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="mx-auto mb-4 h-10 w-10 text-emerald-400"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<!-- Escudo -->
+					<path d="M12 3l7 4v5c0 5-3.5 9-7 9s-7-4-7-9V7l7-4z" />
+					<!-- Check -->
+					<path d="M9 12l2 2 4-4" />
+				</svg>
 
 				<h3 class="text-lg font-semibold">Confianza</h3>
 				<p class="mt-2 text-sm text-gray-300">
@@ -110,30 +113,29 @@
 				</p>
 			</div>
 			<div class="rounded-lg bg-dark-blue/70 p-6 shadow transition hover:shadow-lg">
-<!-- Ícono: cohete (innovación) -->
-<svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 24 24"
-     fill="none"
-     stroke="currentColor"
-     stroke-width="1.5"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     class="h-10 w-10 text-emerald-400 mx-auto mb-4">
+				<!-- Ícono: cohete (innovación) -->
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="mx-auto mb-4 h-10 w-10 text-emerald-400"
+				>
+					<!-- Cuerpo del cohete -->
+					<path d="M12 2c3 3 4 7 4 10a4 4 0 01-8 0c0-3 1-7 4-10z" />
 
-  <!-- Cuerpo del cohete -->
-  <path d="M12 2c3 3 4 7 4 10a4 4 0 01-8 0c0-3 1-7 4-10z" />
-  
-  <!-- Ventana -->
-  <circle cx="12" cy="9" r="1.5" />
+					<!-- Ventana -->
+					<circle cx="12" cy="9" r="1.5" />
 
-  <!-- Aletas -->
-  <path d="M8 14l-2 4 4-2m6-2l2 4-4-2" />
+					<!-- Aletas -->
+					<path d="M8 14l-2 4 4-2m6-2l2 4-4-2" />
 
-  <!-- Llama -->
-  <path d="M12 14v5c0 .5-.5 1-1 1h2c-.5 0-1-.5-1-1v-5z" />
-</svg>
-
-
+					<!-- Llama -->
+					<path d="M12 14v5c0 .5-.5 1-1 1h2c-.5 0-1-.5-1-1v-5z" />
+				</svg>
 
 				<h3 class="text-lg font-semibold">Innovación</h3>
 				<p class="mt-2 text-sm text-gray-300">Buscamos soluciones modernas y eficientes.</p>

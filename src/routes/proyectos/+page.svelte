@@ -3,8 +3,8 @@
 	import Hero from "../../components/pages/blocks/hero.svelte";
 
 	export let data;
-	$: services = data.services;
-	$: page = data.page;
+	$: projects = data.projects?.items;
+	$: page = data.page.item;
 </script>
 
 <Hero 
@@ -16,8 +16,8 @@
 <!-- Listado de servicios -->
 <section class="bg-gray-50 py-16">
 	<div class="container mx-auto px-4 grid grid-cols-3 gap-6">
-		{#each services as service}
-            <ServiceCard image={service?.picture?.lg} title={service.title} description={service.summary} link={service.slug} />
+		{#each projects as project}
+            <ServiceCard image={project?.picture?.lg} title={project.title} description={project.summary} link={project.slug} />
 		{/each}
 	</div>
 </section>
