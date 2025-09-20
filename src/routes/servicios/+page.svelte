@@ -15,7 +15,7 @@
 
 <!-- Listado de servicios -->
 <section class="bg-gray-50 py-16">
-	<div class="container mx-auto px-4 grid grid-cols-3 gap-6">
+	<div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
 		{#each services as service}
             <ServiceCard image={service?.picture?.lg} title={service.title} description={service.summary} link={service.slug} />
 		{/each}
