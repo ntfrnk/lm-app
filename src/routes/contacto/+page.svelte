@@ -49,44 +49,10 @@
 				/>
 			</div>
 
-			<!-- Tipo de trabajo -->
-			<div>
-				<label for="tipo" class="mb-1 block text-sm font-medium text-gray-700"
-					>Tipo de trabajo</label
-				>
-				<select
-					id="tipo"
-					name="tipo"
-					required
-					class="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-emerald-600 focus:ring-emerald-600"
-				>
-					<option value="">Seleccioná una opción</option>
-					<option value="automatizaciones">Automatizaciones</option>
-					<option value="herreria">Herrería</option>
-					<option value="construccion">Construcción</option>
-					<option value="techos">Techos y estructuras</option>
-					<option value="andamios">Andamios</option>
-					<option value="otros">Otros</option>
-				</select>
-			</div>
-
-			<!-- Localidad -->
-			<div>
-				<label for="localidad" class="mb-1 block text-sm font-medium text-gray-700"
-					>Localidad / barrio</label
-				>
-				<input
-					type="text"
-					id="localidad"
-					name="localidad"
-					class="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-emerald-600 focus:ring-emerald-600"
-				/>
-			</div>
-
 			<!-- Detalles -->
 			<div>
 				<label for="detalles" class="mb-1 block text-sm font-medium text-gray-700"
-					>Detalle tu necesidad</label
+					>Tu consulta</label
 				>
 				<textarea
 					id="detalles"
