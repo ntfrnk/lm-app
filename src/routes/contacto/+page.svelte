@@ -7,7 +7,7 @@
 
 <Hero title={page?.title} description={page?.content} image={page?.picture?.lg} />
 
-<section class="bg-gray-50 py-16 py-16 md:px-0">
+<section class="bg-gray-50 px-8 py-16 md:px-0">
 	<div class="container mx-auto max-w-2xl">
 		<form action="/api/presupuestos" method="POST" class="space-y-6 rounded-lg">
 			<!-- Nombre -->
